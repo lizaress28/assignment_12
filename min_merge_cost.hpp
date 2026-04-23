@@ -1,11 +1,15 @@
-#pragma 
+#pragma once
 #include <vector>
-int min_merge_cost(const std::vector<int>& arr){
-    if (files.size() == 1) return 0;    
+#include <queue>
+#include <functional>
+
+int min_merge_cost(const std::vector<int>& files){
+    if (files.size() <= 1) return 0;       
+    
     std::priority_queue<int, std::vector<int>, std::greater<int>> minHeap(files.begin(), files.end());
 
-}
-int total=0
+int total=0;
+
 while (minHeap.size() > 1) {
     int first = minHeap.top();
     minHeap.pop();
