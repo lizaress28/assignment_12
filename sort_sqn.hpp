@@ -4,14 +4,13 @@
 #include <algorithm>  
 #include <cmath>
 #include <functional>
-
 std::vector<int> top_sqrtN_sorted(const std::vector<int>& v){
     const int n = v.size();
     if (n == 0) return {};
     
-    const int k = static_cast<int>(std::sqrt(n));
+    const int k = static_cast<int>(std::ceil(std::sqrt(static_cast<double>(n))));
 
-    std::vector<int>, std::greater<int>> minHeap;
+    std::priority_queue<int, std::vector<int>, std::greater<int>> minHeap;
 
     for (int num : v) {
         minHeap.push(num);
